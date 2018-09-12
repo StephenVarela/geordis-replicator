@@ -1,13 +1,12 @@
 # The Cupboard is where empty glasses are stored.
 # When this is instatiated, it should put some empty
 # glasses onto its shelf if it's working properly.
-
+require 'pry'
 class Cupboard
 
   def initialize
     @shelf = Location.new
     stock_shelf
-    wesley_takes_glasses_for_a_science_project
   end
 
   def shelf
