@@ -1,3 +1,5 @@
+require 'pry'
+
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -18,6 +20,7 @@ class Replicator
 
     # Connect the power to the reactor (the reactor is the power source).
     connect_to_power
+
   end
 
   # This sets up an accessor to the replicator plate, so that in the main
@@ -114,7 +117,7 @@ class Replicator
       @enterprise.transporter.energize(
         # Geordi is in a jokey mood and
         # reprograms the replicator
-        @enterprise.pantry.find_ingredient('banana'),
+        @enterprise.pantry.find_ingredient(ingredient_name),
         @enterprise.pantry.shelf,
         glass_inside_replicator.inside
       )
