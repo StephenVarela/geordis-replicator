@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -71,11 +72,13 @@ class Replicator
     #   glass_inside_replicator.inside.contents
     # then you may find the ingredients order has changed.
     # If it's successful, all the ingredients should still be in the glass.
+
     mix
 
     # This method adjusts the temperature of the contents in the glass.
     # If you read back `glass.temperature`, then it should be set
     # to the temperature the recipe calls for if this method executed properly.
+
     adjust_temperature
 
     # This method moves the glass from @inside_replicator to @plate
@@ -83,7 +86,9 @@ class Replicator
     # If it's successful, glass_inside_replicator should be nil
     # and now @plate.contents should contain the glass at
     # the proper temperature and with the proper ingredients.
+
     transport_glass_to_replicator_plate
+
   end
 
   # This moves the glass from the cupboard to inside the replicator.
@@ -153,6 +158,7 @@ class Replicator
     # or too many attempts have been made to adjust temperature.
     # If successful, @glass will be set to the proper
     # recipe temperature after the loop has finished.
+
     while @glass.temperature != desired_temperature &&
           number_of_adjustments <= maximum_adjustments_allowed
 
@@ -169,7 +175,8 @@ class Replicator
     # Transport glass from reactor back to inside the replicator.
     # If successful, @enterprise.reactor.core will now be empty
     # and @inside_replicator will once again contain the glass.
-    transport_glass_from_reactor
+
+    transport_glass_from_reactor ##THIS FUNCTION FAILS!
 
   end
 
