@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -49,7 +50,7 @@ class Replicator
     # If this method is successful, it will return the glass that was
     # transported and @inside_replicator will contain the glass
     # in its contents.
-    retrieve_glass
+    retrieve_glass #something wrong with this function
 
     # Setup an instance variable to access the glass.
     @glass = @inside_replicator.contents.first
@@ -88,7 +89,7 @@ class Replicator
 
   # This moves the glass from the cupboard to inside the replicator.
   def retrieve_glass
-    @enterprise.transporter.energize(
+      @enterprise.transporter.energize(
       @enterprise.cupboard.find_glass,
       @enterprise.cupboard.shelf,
       @inside_replicator
