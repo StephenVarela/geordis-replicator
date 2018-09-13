@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -76,6 +77,7 @@ class Replicator
     # This method adjusts the temperature of the contents in the glass.
     # If you read back `glass.temperature`, then it should be set
     # to the temperature the recipe calls for if this method executed properly.
+
     adjust_temperature
 
     # This method moves the glass from @inside_replicator to @plate
@@ -146,7 +148,7 @@ class Replicator
 
     # Setup variables for temperature adjustment loop
     desired_temperature         = @recipe.temperature
-    maximum_adjustments_allowed = 5
+    maximum_adjustments_allowed = 70 #5
     number_of_adjustments       = 0
 
     # Keep adjusting temperature until desired temperature is reached
